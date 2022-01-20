@@ -1,0 +1,28 @@
+mixin contentItem(image,heading,subheading,imgIcon)
+  .services-content-item
+    .icon-item
+      img(src=image,alt='')
+    .title-item
+      h6=heading
+      h6=subheading
+    .button-item 
+      img(src=imgIcon,alt='')
+
+mixin title(title,heading)
+  h6=title 
+  h3=heading
+
+mixin customerItem(number,text)
+  .customer-data-item
+    .customer-data-item-infor
+      .customer-data-item-infor-number
+        h2=number
+      .customer-data-item-infor-text
+        p=text
+
+mixin customerSelect(image,text)
+  .customer-satisfaction-select-item
+    .icon
+      img(src=image, alt="")
+    .text
+      p=text

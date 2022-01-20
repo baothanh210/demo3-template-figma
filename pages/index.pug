@@ -1,0 +1,58 @@
+include mixins
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="../assets/css/style.css")
+    title Document
+  body 
+    .main
+      .container
+          include ./header
+      .banner-container 
+        .banner-image
+          .banner-image-blue 
+            img(src="../assets/images/banner/vector-blue.png", alt="")
+            .banner-image-arrow2 
+              img(src="../assets/images/banner/vector-arrow.png", alt="")
+            .banner-image-yellow 
+              img(src="../assets/images/banner/vector-yellow.png", alt="")
+            .banner-image-arrow 
+              img(src="../assets/images/banner/vector-arrow2.png", alt="")
+            .banner-image-avatar
+              img(src="../assets/images/banner/avatar.png", alt="")
+              .banner-image-circle
+                img(src="../assets/images/banner/circle-3colors.png", alt="")
+              .banner-image-study 
+                img(src="../assets/images/banner/vector-study.png", alt="")
+        .container
+          include ./banner
+      .container
+        include ./services
+      .document-container
+        .document-image-hidden
+          .document-image-hidden-left
+            img(src="../assets/images/documentImg/image-left.png", alt="")
+          .document-image-hidden-right
+            img(src="../assets/images/documentImg/image-right.png", alt="")
+        .container 
+          include ./document
+      .bgc-customer
+        .container
+          include ./customer
+      .container
+        include ./working-spacing
+      .bg-message-right
+        img(src="../assets/images/message/bg-right.png", alt="")
+      .container 
+        include ./list-customer
+      .bgc-message
+        .container 
+          include ./message
+      .bg-message-left 
+        img(src="../assets/images/message/bg-left.png", alt="")
+      .container 
+        include ./question
+
