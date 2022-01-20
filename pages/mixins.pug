@@ -5,8 +5,9 @@ mixin contentItem(image,heading,subheading,imgIcon)
     .title-item
       h6=heading
       h6=subheading
-    .button-item 
-      img(src=imgIcon,alt='')
+    .button-item
+      button
+        img(src=imgIcon,alt='')
 
 mixin title(title,heading)
   h6=title 
@@ -26,3 +27,16 @@ mixin customerSelect(image,text)
       img(src=image, alt="")
     .text
       p=text
+
+mixin testimonialsItem(avatar,name,job,text,start)
+  .testimonials-item 
+      .testimonials-item-avatar 
+          img(src=avatar, alt="")
+      .testimonials-item-info
+          .testimonials-item-name
+              h5=name 
+              p=job
+          .testimonials-item-text
+              p=text
+          .testimonials-item-start
+              img(src=start, alt="") 
