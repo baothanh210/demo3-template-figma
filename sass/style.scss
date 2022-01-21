@@ -149,18 +149,22 @@ picture {
   }
   .banner-button {
     button{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
       cursor: pointer;
       color: white;
       width: 200px;
       border-radius: 12px;
       background-color: #4C40F7;
       text-align: center;
+      padding: 19px 0;
     }
    
     filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
     p{
-      padding: 19px 0;
       
+      font-weight: bold;
     }
   }
 }
@@ -1325,9 +1329,7 @@ picture {
     top: 25px;
     right: 45px;
   }
-  .banner-image-arrow2{
-    z-index: 2;
-  }
+  
   .services{
     margin-bottom: 150px;
   }

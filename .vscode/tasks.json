@@ -6,7 +6,7 @@
     {
       "label": "Run Pug",
       "type": "shell",
-      "command": "pug -w ./pages/index.pug -o ./ -P"
+      "command": "pug -w ./pages/index.pug -o ./dist -P"
     },
     {
       "label": "Run Sass",
