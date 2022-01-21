@@ -40,3 +40,27 @@ mixin testimonialsItem(avatar,name,job,text,start)
               p=text
           .testimonials-item-start
               img(src=start, alt="") 
+
+mixin teamItem(image,name,job)
+  .team-members-item 
+    .item-image
+      img(src=image, alt="")
+    .item-info
+      .item-name
+        h5=name
+      .item-job
+        p=job
+
+mixin productItem(name,detail,image1,image2)
+  .product-item
+    .product-info
+      .product-name
+        h1=name
+      .line-white
+      .product-detail
+        p=detail
+    .product-image
+      .firstImage 
+        img(src=image1, alt="")
+      .secondImage 
+        img(src=image2, alt="")

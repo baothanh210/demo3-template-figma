@@ -4,9 +4,24 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run Pug",
+      "label": "Run home pug",
       "type": "shell",
-      "command": "pug -w ./pages/index.pug -o ./ -P"
+      "command": "pug -w ./pages/index.pug -o ./ -P",
+    },
+    {
+      "label": "Run about pug",
+      "type": "shell",
+      "command": "pug -w ./pages/about.pug -o ./ -P",
+    },
+    {
+      "label": "Run work pug",
+      "type": "shell",
+      "command": "pug -w ./pages/work.pug -o ./ -P",
+    },
+    {
+      "label": "Run contact pug",
+      "type": "shell",
+      "command": "pug -w ./pages/contact.pug -o ./ -P",
     },
     {
       "label": "Run Sass",

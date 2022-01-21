@@ -12,17 +12,17 @@ html(lang="en")
   body 
     .main
       .container
-          include ./header
+          include ./home/header
           ul.header-nav-mobile
             .header-li
               li 
-                a(href="#")
+                a(href="index.html")
                   h6 Home
               li 
-                a(href="#")
+                a(href="work.html")
                   h6 Works      
               li 
-                a(href="#")
+                a(href="about.html")
                   h6 About
             .header-button-contact      
               li
@@ -32,54 +32,54 @@ html(lang="en")
       .banner-container 
         .banner-image
           .banner-image-blue 
-            img(src="assets/images/banner/vector-blue.png", alt="")
+            img(src="assets/images/home/banner/vector-blue.png", alt="")
             .banner-image-arrow2 
-              img(src="assets/images/banner/vector-arrow.png", alt="")
+              img(src="assets/images/home/banner/vector-arrow.png", alt="")
             .banner-image-yellow 
-              img(src="assets/images/banner/vector-yellow.png", alt="")
+              img(src="assets/images/home/banner/vector-yellow.png", alt="")
             .banner-image-arrow 
-              img(src="assets/images/banner/vector-arrow2.png", alt="")
+              img(src="assets/images/home/banner/vector-arrow2.png", alt="")
             .banner-image-avatar
-              img(src="assets/images/banner/avatar.png", alt="")
+              img(src="assets/images/home/banner/avatar.png", alt="")
               .banner-image-circle
-                img(src="assets/images/banner/circle-3colors.png", alt="")
+                img(src="assets/images/home/banner/circle-3colors.png", alt="")
               .banner-image-study 
-                img(src="assets/images/banner/vector-study.png", alt="")
+                img(src="assets/images/home/banner/vector-study.png", alt="")
         .container
-          include ./banner
+          include ./home/banner
       .container
-        include ./services
+        include ./home/services
       .document-container
         .document-image-hidden
           .document-image-hidden-left
-            img(src="assets/images/documentImg/image-left.png", alt="")
+            img(src="assets/images/home/documentImg/image-left.png", alt="")
           .document-image-hidden-right
-            img(src="assets/images/documentImg/image-right.png", alt="")
+            img(src="assets/images/home/documentImg/image-right.png", alt="")
         .container 
-          include ./document
+          include ./home/document
       .bgc-customer
         .container
-          include ./customer
+          include ./home/customer
       .container
-        include ./working-spacing
+        include ./home/working-spacing
       .bg-message-right
-        img(src="assets/images/message/bg-right.png", alt="")
+        img(src="assets/images/home/message/bg-right.png", alt="")
       .container 
-        include ./list-customer
+        include ./home/list-customer
       .bgc-message
         .container 
-          include ./message
+          include ./home/message
       .bg-message-left 
-        img(src="assets/images/message/bg-left.png", alt="")
+        img(src="assets/images/home/message/bg-left.png", alt="")
       .container 
-        include ./question
+        include ./home/question
       .bg-testimonial
         .container 
-          include ./testimonials
+          include ./home/testimonials
       .container 
-        include ./signup
+        include ./home/signup
       .container
-        include ./footer
+        include ./home/footer
   script.
     const btnMenuMobile = document.querySelector('.btn-mobile-menu');
     const mobileMenu = document.querySelector('.header-nav-mobile');
