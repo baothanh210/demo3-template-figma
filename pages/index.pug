@@ -5,12 +5,30 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+    script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
     link(rel="stylesheet", href="../assets/css/style.css")
     title Document
   body 
     .main
       .container
           include ./header
+          ul.header-nav-mobile
+            .header-li
+              li 
+                a(href="#")
+                  h6 Home
+              li 
+                a(href="#")
+                  h6 Works      
+              li 
+                a(href="#")
+                  h6 About
+            .header-button-contact      
+              li
+                button
+                  .text-contact 
+                    p Contact Us
       .banner-container 
         .banner-image
           .banner-image-blue 
@@ -62,3 +80,30 @@ html(lang="en")
         include ./signup
       .container
         include ./footer
+  script.
+    const btnMenuMobile = document.querySelector('.btn-mobile-menu');
+    const mobileMenu = document.querySelector('.header-nav-mobile');
+    const header = document.querySelector('.header');
+    const btnCloseMenu = document.querySelector('.btn-close-menu');
+    let count=0;
+    btnMenuMobile.addEventListener("click",()=> {
+      if(btnMenuMobile.style.display="block")
+      {
+        btnMenuMobile.style.display="none"
+        btnCloseMenu.style.display="block"
+      }
+      //- btnCloseMenu.style.display="block";
+      mobileMenu.style.display="block";
+      mobileMenu.style.display="flex";
+      header.style.height="75px";
+      
+    })
+    btnCloseMenu.addEventListener("click",()=>{
+      if(btnCloseMenu.style.display="block")
+      {
+        btnMenuMobile.style.display="block"
+        btnCloseMenu.style.display="none"
+      }
+        mobileMenu.style.display="none"
+        header.style.height="100px";
+    })

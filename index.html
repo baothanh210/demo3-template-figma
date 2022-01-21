@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Document</title>
   </head>
@@ -27,7 +29,34 @@
               </div>
             </button>
           </div>
+          <div class="header-btn-menu">
+            <div class="btn-mobile-menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="btn-close-menu"> 
+              <ion-icon name="close-outline"></ion-icon>
+            </div>
+          </div>
         </div>
+        <ul class="header-nav-mobile">
+          <div class="header-li">
+            <li> <a href="#">
+                <h6>Home</h6></a></li>
+            <li> <a href="#">
+                <h6>Works      </h6></a></li>
+            <li> <a href="#">
+                <h6>About</h6></a></li>
+          </div>
+          <div class="header-button-contact">     
+            <li>
+              <button>
+                <div class="text-contact"> 
+                  <p>Contact Us</p>
+                </div>
+              </button>
+            </li>
+          </div>
+        </ul>
       </div>
       <div class="banner-container"> 
         <div class="banner-image">
@@ -512,4 +541,32 @@
       </div>
     </div>
   </body>
+  <script>
+    const btnMenuMobile = document.querySelector('.btn-mobile-menu');
+    const mobileMenu = document.querySelector('.header-nav-mobile');
+    const header = document.querySelector('.header');
+    const btnCloseMenu = document.querySelector('.btn-close-menu');
+    let count=0;
+    btnMenuMobile.addEventListener("click",()=> {
+      if(btnMenuMobile.style.display="block")
+      {
+        btnMenuMobile.style.display="none"
+        btnCloseMenu.style.display="block"
+      }
+      //- btnCloseMenu.style.display="block";
+      mobileMenu.style.display="block";
+      mobileMenu.style.display="flex";
+      header.style.height="75px";
+      
+    })
+    btnCloseMenu.addEventListener("click",()=>{
+      if(btnCloseMenu.style.display="block")
+      {
+        btnMenuMobile.style.display="block"
+        btnCloseMenu.style.display="none"
+      }
+        mobileMenu.style.display="none"
+        header.style.height="100px";
+    })
+  </script>
 </html>
