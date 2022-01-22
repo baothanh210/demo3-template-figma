@@ -13,27 +13,30 @@ html(lang="en")
     .main
         .container
           include ./about/header
-          ul.header-nav-mobile
+          .header-nav-mobile
+            .btn-close-menu 
+              ion-icon(name='close-outline')
             .header-li
-              li 
-                a(href="#")
-                  h6 Home
-              li 
-                a(href="#")
-                  h6 Works      
-              li 
-                a(href="#")
-                  h6 About
-            .header-button-contact      
-              li
-                button
-                  .text-contact 
-                    a(href="contact.html") 
-                      p Contact Us
+              ul
+                li 
+                  a(href="index.html")
+                    h6 Home
+                li 
+                  a(href="work.html")
+                    h6 Works      
+                li 
+                  a(href="about.html")
+                    h6 About
+              .header-button-contact      
+                li
+                  button
+                    .text-contact 
+                      a(href="contact.html") 
+                        p Contact Us
           include ./about/banner
           include ./about/team 
           include ./about/moment
           include ./home/working-spacing
           include ./home/signup
           include ./home/footer
- 
+  script(src='./javascript/main.js')  

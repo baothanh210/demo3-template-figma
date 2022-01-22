@@ -32,30 +32,31 @@
             <div class="btn-mobile-menu">
               <ion-icon name="menu-outline"></ion-icon>
             </div>
-            <div class="btn-close-menu"> 
-              <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="header-nav-mobile">
+          <div class="btn-close-menu"> 
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+          <div class="header-li">
+            <ul>
+              <li> <a href="index.html">
+                  <h6>Home</h6></a></li>
+              <li> <a href="work.html">
+                  <h6>Works      </h6></a></li>
+              <li> <a href="about.html">
+                  <h6>About</h6></a></li>
+            </ul>
+            <div class="header-button-contact">     
+              <li>
+                <button>
+                  <div class="text-contact"> <a href="contact.html"> 
+                      <p>Contact Us</p></a></div>
+                </button>
+              </li>
             </div>
           </div>
         </div>
-        <ul class="header-nav-mobile">
-          <div class="header-li">
-            <li> <a href="index.html">
-                <h6>Home</h6></a></li>
-            <li> <a href="work.html">
-                <h6>Works      </h6></a></li>
-            <li> <a href="about.html">
-                <h6>About</h6></a></li>
-          </div>
-          <div class="header-button-contact">     
-            <li>
-              <button>
-                <div class="text-contact"> 
-                  <p>Contact Us</p>
-                </div>
-              </button>
-            </li>
-          </div>
-        </ul>
       </div>
       <div class="banner-container"> 
         <div class="banner-image">
@@ -540,32 +541,5 @@
       </div>
     </div>
   </body>
-  <script>
-    const btnMenuMobile = document.querySelector('.btn-mobile-menu');
-    const mobileMenu = document.querySelector('.header-nav-mobile');
-    const header = document.querySelector('.header');
-    const btnCloseMenu = document.querySelector('.btn-close-menu');
-    let count=0;
-    btnMenuMobile.addEventListener("click",()=> {
-      if(btnMenuMobile.style.display="block")
-      {
-        btnMenuMobile.style.display="none"
-        btnCloseMenu.style.display="block"
-      }
-      //- btnCloseMenu.style.display="block";
-      mobileMenu.style.display="block";
-      mobileMenu.style.display="flex";
-      header.style.height="75px";
-      
-    })
-    btnCloseMenu.addEventListener("click",()=>{
-      if(btnCloseMenu.style.display="block")
-      {
-        btnMenuMobile.style.display="block"
-        btnCloseMenu.style.display="none"
-      }
-        mobileMenu.style.display="none"
-       
-    })
-  </script>
+  <script src="./javascript/main.js"></script>
 </html>

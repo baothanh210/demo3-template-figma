@@ -13,22 +13,26 @@ html(lang="en")
     .main
       .container
           include ./home/header
-          ul.header-nav-mobile
+          .header-nav-mobile
+            .btn-close-menu 
+              ion-icon(name='close-outline')
             .header-li
-              li 
-                a(href="index.html")
-                  h6 Home
-              li 
-                a(href="work.html")
-                  h6 Works      
-              li 
-                a(href="about.html")
-                  h6 About
-            .header-button-contact      
-              li
-                button
-                  .text-contact 
-                    p Contact Us
+              ul
+                li 
+                  a(href="index.html")
+                    h6 Home
+                li 
+                  a(href="work.html")
+                    h6 Works      
+                li 
+                  a(href="about.html")
+                    h6 About
+              .header-button-contact      
+                li
+                  button
+                    .text-contact 
+                      a(href="contact.html") 
+                        p Contact Us
       .banner-container 
         .banner-image
           .banner-image-blue 
@@ -80,30 +84,6 @@ html(lang="en")
         include ./home/signup
       .container
         include ./home/footer
-  script.
-    const btnMenuMobile = document.querySelector('.btn-mobile-menu');
-    const mobileMenu = document.querySelector('.header-nav-mobile');
-    const header = document.querySelector('.header');
-    const btnCloseMenu = document.querySelector('.btn-close-menu');
-    let count=0;
-    btnMenuMobile.addEventListener("click",()=> {
-      if(btnMenuMobile.style.display="block")
-      {
-        btnMenuMobile.style.display="none"
-        btnCloseMenu.style.display="block"
-      }
-      //- btnCloseMenu.style.display="block";
-      mobileMenu.style.display="block";
-      mobileMenu.style.display="flex";
-      header.style.height="75px";
-      
-    })
-    btnCloseMenu.addEventListener("click",()=>{
-      if(btnCloseMenu.style.display="block")
-      {
-        btnMenuMobile.style.display="block"
-        btnCloseMenu.style.display="none"
-      }
-        mobileMenu.style.display="none"
-       
-    })
+  script(src='./javascript/main.js')
+  
+   
