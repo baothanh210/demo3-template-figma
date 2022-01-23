@@ -299,14 +299,25 @@ picture {
   padding-top: 30px;
 }
 .services-content-item .title-item h6:first-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  flex-grow: 1;
   font-size: 20px;
   font-weight: 600;
 }
 .services-content-item .title-item h6 {
+  flex-grow: 1;
   padding-top: 16px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
+}
+.services-content-item .button-item {
+  margin-top: auto;
 }
 .services-content-item .button-item button {
   cursor: pointer;
@@ -326,6 +337,7 @@ picture {
   box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.5);
 }
 .services-content-item:first-child .icon-item {
+  flex-shrink: 0;
   display: flex;
   background-color: white;
   border-radius: 50%;
@@ -854,23 +866,35 @@ picture {
   justify-content: center;
   text-align: center;
   row-gap: 24px;
+  padding: 0 32px 44px 32px;
 }
 .testimonials-content .testimonials-item .testimonials-item-avatar {
+  flex-shrink: 0;
   width: 120px;
   height: 120px;
   margin-top: -65px;
   filter: drop-shadow(0px 20px 30px rgba(76, 64, 247, 0.2));
 }
 .testimonials-content .testimonials-item .testimonials-item-info {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 24px;
-  padding: 0 32px 44px 32px;
+}
+.testimonials-content .testimonials-item .testimonials-item-info .testimonials-item-name {
+  display: flex;
+  flex-direction: column;
 }
 .testimonials-content .testimonials-item .testimonials-item-info .testimonials-item-name h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -883,11 +907,17 @@ picture {
   font-size: 16px;
   line-height: 24px;
 }
+.testimonials-content .testimonials-item .testimonials-item-info .testimonials-item-text {
+  flex-grow: 1;
+}
 .testimonials-content .testimonials-item .testimonials-item-info .testimonials-item-text p {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 32px;
+}
+.testimonials-content .testimonials-item .testimonials-item-info .testimonials-item-start {
+  margin-top: auto;
 }
 .testimonials-content .testimonials-item:first-child {
   box-shadow: -15px 20px 70px rgba(76, 64, 247, 0.2);
@@ -1136,25 +1166,89 @@ picture {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
+.team-members-item {
+  display: flex;
+  flex-direction: column;
+}
 .team-members-item .item-image {
-  background-color: #FF2D59;
-  border-radius: 10px;
+  flex-shrink: 0;
+  padding: 20px 20px 0 20px;
+  flex: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .team-members-item .item-image img {
-  padding-top: 20px;
-  width: 230px;
   margin: 0 auto;
+  padding-top: 20px;
+  max-width: 200px;
+  height: 300px;
+  object-fit: contain;
 }
 .team-members-item .item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   background-color: white;
-  border-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   text-align: center;
+}
+.team-members-item .item-info .item-name {
+  flex-grow: 1;
 }
 .team-members-item .item-info .item-name h5 {
   font-size: 20px;
 }
 .team-members-item .item-info .item-job p {
   font-size: 15px;
+}
+
+.team-members-item:first-child .item-image {
+  background-color: #FF2D59;
+}
+
+.team-members-item:nth-child(2) .item-image {
+  background-color: #007BFF;
+}
+
+.team-members-item:nth-child(3) .item-image {
+  background-color: #FFCC00;
+}
+
+.team-members-item:nth-child(4) .item-image {
+  background-color: #4ADB61;
+}
+
+.team-members-item:nth-child(5) .item-image {
+  background-color: #d81d1d;
+}
+
+.team-members-item:nth-child(6) .item-image {
+  background-color: #FF6800;
+}
+
+.team-members-item:nth-child(7) .item-image {
+  background-color: #055ab4;
+}
+
+.team-members-item:nth-child(8) .item-image {
+  background-color: #0f8b62;
+}
+
+.team-members-item:nth-child(9) .item-image {
+  background-color: #86b927;
+}
+
+.team-members-item:nth-child(10) .item-image {
+  background-color: #c707bd;
+}
+
+.team-members-item:nth-child(11) .item-image {
+  background-color: #4e08aa;
+}
+
+.team-members-item:last-child .item-image {
+  background-color: #068b9c;
 }
 
 .moment-title {

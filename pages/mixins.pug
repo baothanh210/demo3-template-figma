@@ -1,5 +1,6 @@
 mixin contentItem(image,heading,subheading,imgIcon)
   .services-content-item
+    
     .icon-item
       img(src=image,alt='')
     .title-item
@@ -38,8 +39,8 @@ mixin testimonialsItem(avatar,name,job,text,start)
               p=job
           .testimonials-item-text
               p=text
-          .testimonials-item-start
-              img(src=start, alt="") 
+      .testimonials-item-start
+        img(src=start, alt="") 
 
 mixin teamItem(image,name,job)
   .team-members-item 
