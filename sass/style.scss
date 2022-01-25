@@ -15,12 +15,34 @@ figure,
 picture {
   margin: 0;
 }
+:root{
+  --dark-text: black;
+  --dark-bg:#00113B;
+  --light: rgb(255, 255, 255);
+  --light-heading:blue;
+  --dark-heading:#FFCC00;
+  --light-container-ms:orange;
+  --dark-item: #00113B;
+  --background: var(--light);
+  --color: var(--dark-text);
+  --heading-color:var(--light-heading);
+  --item-color:var(--light);
+  --container-color-ms:var(--light-container-ms);
+}
+.DarkMode {
+  --background:var(--dark-bg);
+  --color:var(--light);
+  --heading-color:var(--dark-heading);
+  --item-color:var(--dark-item);
+  --container-color-ms:var(--dark-item)
+}
 body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: 'Quicksand', sans-serif;
   font-family: 'Spline Sans', sans-serif;
-  background-color: #00113B;
+  background-color:var(--background);
+  color: var(--color);
 }
 input,
 button,
@@ -45,9 +67,11 @@ picture {
   }
 }
 
+// ------------------------------------------------------------CSS----------------------------------------------------------
 .main {
   overflow: hidden;
 }
+
 .container {
   max-width: 1120px;
   margin-inline:auto;
@@ -82,15 +106,17 @@ picture {
     justify-content: center;
     padding: 0;
     li a {
+      color: var(--color);
       text-decoration: none;
     }
     li:first-child h6{
-      color:#FFCC00;
+     
+     color: var(--heading-color);
     }
     h6{
       font-size: 20px;
       font-weight: 600;
-      color: white;
+      color: --color;
     }
     li {
       list-style-type: none;
@@ -142,14 +168,14 @@ picture {
   &-heading {
     h2{
       font-size: 56px;
-      color: white;
+      color: var(--color);
     }
     .heading-color {
-      color: #FFCC00;
+      color: var(--heading-color);
     }
   }
   &-content {
-    color: white;
+    color: --color;
     font-size: 18px;
     padding: 24px 0;
     max-width: 400px;
@@ -267,13 +293,13 @@ picture {
     margin-inline: auto;
     margin-bottom: 60px;
     h6{
-      color: #FFCC00;
+      color: var(--heading-color);
       font-size: 20px;
       font-weight: 600;
     }
     h3{
       padding: 0 30px;
-      color: white;
+      color: var(--color);
       font-size: 42px;
       font-weight: 600;
     }
@@ -288,13 +314,13 @@ picture {
       flex-direction: column;
       align-items: center;
       
-      background-color: #00113B;
+      background-color: var(--item-color);
       box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.2);
       border-radius: 20px;
       padding: 44px;
       .title-item {
        
-        color: white;
+        color: var(--color);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -365,7 +391,6 @@ picture {
       box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.5);
       .button-item {
         button{
-
           background-color: white;
         }
       
@@ -501,13 +526,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: var(--color);
        font-size: 42px;
        font-weight: 600;
      }
@@ -521,9 +546,9 @@ picture {
      }
    }
 }
-.bgc-customer,
-.bgc-message{
-  background-color: #020E2D;
+.bgc-customer
+{
+  background-color: var(--item-color);
 }
 .customer{
   padding: 100px 0 ;
@@ -531,13 +556,13 @@ picture {
   gap: 80px;
   align-items: center;
   &-data {
-    
     width: 50%;
     display: grid;
     gap: 40px;
     grid-template-columns: repeat(2,minmax(0,1fr));
+
     &-item{
-      background-color: #4C40F7;
+      background-color: var(--item-color);
       box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.2);
       border-radius: 20px;
       &-infor{
@@ -551,7 +576,7 @@ picture {
           h2{
             font-size: 56px;
             font-weight: 600;
-            color: white;
+            color: var(--color);
           }
         }
         &-text{
@@ -566,7 +591,7 @@ picture {
             word-break: break-word;
             font-size: 18px;
             font-weight: 400;
-            color: white;
+            color: var(--color);
           }
         }
       }
@@ -582,7 +607,7 @@ picture {
     &-heading{
       h2{
 
-        color: white;
+        color: var(--color);
         font-size: 56px;
         font-weight: 600;
         line-height: 72px;
@@ -596,7 +621,7 @@ picture {
         font-weight: normal;
         font-size: 18px;
         line-height: 32px;
-        color: white;
+        color: --color;
       }
     }
     &-select {
@@ -615,7 +640,7 @@ picture {
           font-weight: normal;
           font-size: 18px;
           line-height: 32px;
-          color: white;
+          color: --color;
         }
       }
       }
@@ -647,13 +672,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: var(--color);
        font-size: 42px;
        font-weight: 600;
      }
@@ -713,6 +738,7 @@ picture {
 }
 .list-customer {
   margin: 200px 0;
+ 
   &-title{
     
     text-align: center;
@@ -720,13 +746,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 80px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: var(--color);
        font-size: 42px;
        font-weight: 600;
      }
@@ -736,7 +762,13 @@ picture {
      grid-template-columns: repeat(5,minmax(0,1fr));
      column-gap:117px;
      row-gap:60px;
+     img{
+      color: var(--color);
+     }
    }
+}
+.bgc-message{
+  background-color:var(--container-color-ms);
 }
 .bg-message-left{
   position: absolute;
@@ -750,7 +782,6 @@ picture {
 }
 
 .message{
-  
   .message-container{
     display: flex;
     padding: 100px 0;
@@ -758,12 +789,14 @@ picture {
     align-items: center;
     gap: 44px;
     justify-content: center;
+    
       .message-content{
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        
         .message-icon{
          
           img{
@@ -776,7 +809,7 @@ picture {
           letter-spacing: -0.1px;
           p{
             max-width: 723px;
-            color: white;
+            color: var(--color);
             font-style: normal;
             font-weight: normal;
             font-size: 28px;
@@ -838,13 +871,13 @@ picture {
       margin-inline: auto;
       margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: --color;
        font-size: 42px;
        font-weight: 600;
      }
@@ -857,11 +890,11 @@ picture {
     .question-item{
       display: flex;
       flex-direction: column;
-      background-color: #00113B;
+      background-color: var(--background);
       border: 2px solid #4C40F7;
       box-sizing: border-box;
       border-radius: 8px;
-      color: white;
+      color: --color;
       padding: 32px;
       .question-text{
         
@@ -885,7 +918,7 @@ picture {
   }
 }
 .bg-testimonial{
-  background-color: #020E2D;
+  background-color:var(--item-color);
 }
 .testimonials
 {
@@ -897,13 +930,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 125px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: --color;
        font-size: 42px;
        font-weight: 600;
      }
@@ -915,9 +948,9 @@ picture {
     column-gap: 32px;
     row-gap:120px;
     .testimonials-item{
-      background-color: #00113B;
+      background-color: var(--background);
       border-radius: 20px;
-      color: white;
+      color: var(--color);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -925,6 +958,7 @@ picture {
       text-align: center;
       row-gap: 24px;
       padding:0 32px 44px 32px;
+      filter: drop-shadow(0px 20px 30px rgba(76, 64, 247, 0.2));
       .testimonials-item-avatar{
         flex-shrink: 0;
         width: 120px;
@@ -1043,8 +1077,13 @@ picture {
     }
   }
 }
+.bg-footer {
+  background-color: #00113B;
+  padding-bottom: 50px;
+}
 .footer{
   .container-footer{
+   
     &-blue{
       margin: 200px 0;
       background-color: #4C40F7;
@@ -1224,7 +1263,7 @@ picture {
     }
     .banner-about-text{
       position: absolute;
-      color: white;
+      color: --color;
       h2{
         font-size: 56px;
         font-weight: 600;
@@ -1245,13 +1284,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: --color;
        font-size: 42px;
        font-weight: 600;
      }
@@ -1263,7 +1302,8 @@ picture {
     &-item{
       display: flex;
       flex-direction: column;
-     
+      filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
+      color: black;
       .item-image{
         flex-shrink: 0;
         padding: 20px 20px 0 20px;
@@ -1371,13 +1411,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: --color;
        font-size: 42px;
        font-weight: 600;
      }
@@ -1423,7 +1463,7 @@ picture {
       max-width: 500px;
       text-align: center;
       h1{
-        color: white;
+        color: --color;
         font-size: 40px;
       }
     }
@@ -1446,13 +1486,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: var(--color);
        font-size: 42px;
        font-weight: 600;
      }
@@ -1467,13 +1507,13 @@ picture {
      margin-inline: auto;
      margin-bottom: 60px;
      h6{
-       color: #FFCC00;
+       color: var(--heading-color);
        font-size: 20px;
        font-weight: 600;
      }
      h3{
        padding: 0 30px;
-       color: white;
+       color: --color;
        font-size: 42px;
        font-weight: 600;
      }
@@ -1636,7 +1676,7 @@ picture {
       display: flex;
       flex-direction: column;
       gap: 30px;
-      color: white;
+      color: --color;
       max-width:400px;
       h1{
         font-size: 56px ;
@@ -1679,7 +1719,7 @@ picture {
           border-radius: 10px;
           width: 100%;
           padding: 10px;
-          background-color: #00113B;
+          background-color: var(--item-color);
           filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
           color: white;
         }
@@ -1689,7 +1729,7 @@ picture {
           padding: 10px;
           border: 2px solid #2f22df;
           border-radius: 10px;
-          background-color: #00113B;
+          background-color: var(--item-color);
           filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
           color: white;
         }
@@ -1720,13 +1760,14 @@ picture {
     justify-content: space-around;
     .social-item{
       border-radius: 10px;
-      color: white;
-      background-color: #020E2D;
+      color: var(--color);
+      background-color: var(--item-color);
       padding: 20px 30px;
       display: flex;
       align-items: center;
       justify-content: space-around;
       gap: 15px;
+      filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
     }
     .social-item:nth-child(2){
       filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
@@ -1920,7 +1961,7 @@ picture {
     ion-icon{
       width: 48px;
       height: 48px;
-      color: white;
+      color: black;
       margin: 28px 0;
     }
     
