@@ -306,6 +306,7 @@ picture {
   row-gap: 60px;
 }
 .services-content-item {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,9 +364,12 @@ picture {
   color: white;
   margin-top: 44px;
 }
-.services-content-item:first-child {
+.services-content-item:hover {
   background-color: #4C40F7;
   box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.5);
+}
+.services-content-item:hover .button-item button {
+  background-color: white;
 }
 .services-content-item:first-child .icon-item {
   flex-shrink: 0;
@@ -381,9 +385,6 @@ picture {
   width: 30px;
   height: 36px;
   object-fit: cover;
-}
-.services-content-item:first-child .button-item button {
-  background-color: white;
 }
 .services-content-item:nth-child(2) .icon-item {
   display: flex;

@@ -310,6 +310,7 @@ picture {
     column-gap: 32px;
     row-gap:60px;
     &-item{
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -371,6 +372,16 @@ picture {
 
       }
     }
+    &-item:hover{
+      background-color: #4C40F7;
+      box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.5);
+      .button-item {
+        button{
+          background-color: white;
+        }
+      
+      }
+    }
     &-item:first-child{
       .icon-item {
         flex-shrink: 0;
@@ -386,14 +397,6 @@ picture {
           height: 36px;
           object-fit: cover;
         }
-      }
-      background-color: #4C40F7;
-      box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.5);
-      .button-item {
-        button{
-          background-color: white;
-        }
-      
       }
     }
     &-item:nth-child(2){
