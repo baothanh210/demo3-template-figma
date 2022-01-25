@@ -29,13 +29,23 @@ picture {
   --item-color:var(--light);
   --container-color-ms:var(--light-container-ms);
 }
-.DarkMode {
-  --background:var(--dark-bg);
-  --color:var(--light);
-  --heading-color:var(--dark-heading);
-  --item-color:var(--dark-item);
-  --container-color-ms:var(--dark-item)
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background:var(--dark-bg);
+    --color:var(--light);
+    --heading-color:var(--dark-heading);
+    --item-color:var(--dark-item);
+    --container-color-ms:var(--dark-item)
+  }
 }
+
+// .DarkMode {
+//   --background:var(--dark-bg);
+//   --color:var(--light);
+//   --heading-color:var(--dark-heading);
+//   --item-color:var(--dark-item);
+//   --container-color-ms:var(--dark-item)
+// }
 body {
   min-height: 100vh;
   line-height: 1.5;
