@@ -136,6 +136,7 @@ picture {
   &-contact {
     flex: none;
     button{
+      border: none;
       cursor: pointer;
       margin:28px 0;
       background-color:#4C40F7;
@@ -192,6 +193,7 @@ picture {
   }
   .banner-button {
     button{
+      border: none;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -324,13 +326,11 @@ picture {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
       background-color: var(--item-color);
       box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.2);
       border-radius: 20px;
       padding: 44px;
       .title-item {
-       
         color: var(--color);
         display: flex;
         flex-direction: column;
@@ -396,7 +396,7 @@ picture {
       .icon-item {
         flex-shrink: 0;
         display: flex;
-        background-color: white;
+        background-color: rgb(216, 207, 207);
         border-radius: 50%;
         align-items: center;
         justify-content: center;
@@ -1750,6 +1750,7 @@ picture {
     }
     .button-form{
       button{ 
+        border: none;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -1974,7 +1975,7 @@ picture {
     ion-icon{
       width: 48px;
       height: 48px;
-      color: black;
+      color: --color;
       margin: 28px 0;
     }
     
@@ -2271,7 +2272,7 @@ picture {
   border: 1px solid #2f22df;
   flex-direction: column;
   align-items: center;
-  background-color: #00113B;
+  background-color: var(--background);
   box-shadow: -10px 30px 70px rgb(76 64 247 / 20%);
   border-radius: 20px;
   padding: 44px;
@@ -2297,6 +2298,12 @@ picture {
   } 
 }
 @media screen and (max-width:480px) {
+  .customer-data-item {
+    background-color: var(--item-color);
+    box-shadow: -10px 30px 70px rgb(76 64 247 / 20%);
+    border-radius: 20px;
+    border: 1px solid #2f22df;
+  }
   .footer .container-footer-blue .footer-input input {
     padding: 28px;
     color: white;
@@ -2406,4 +2413,5 @@ picture {
      width: 200px;
    }
  }
+ 
 }

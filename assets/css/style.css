@@ -133,6 +133,7 @@ picture {
   flex: none;
 }
 .header-contact button {
+  border: none;
   cursor: pointer;
   margin: 28px 0;
   background-color: #4C40F7;
@@ -190,6 +191,7 @@ picture {
   filter: drop-shadow(5px 10px 30px rgba(76, 64, 247, 0.5));
 }
 .banner-text .banner-button button {
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -375,7 +377,7 @@ picture {
 .services-content-item:first-child .icon-item {
   flex-shrink: 0;
   display: flex;
-  background-color: white;
+  background-color: #d8cfcf;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -1622,6 +1624,7 @@ picture {
   color: white;
 }
 .content-contact .container-content-contact .button-form button {
+  border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1841,7 +1844,7 @@ picture {
   .btn-mobile-menu ion-icon {
     width: 48px;
     height: 48px;
-    color: black;
+    color: --color;
     margin: 28px 0;
   }
 
@@ -2156,7 +2159,7 @@ picture {
     border: 1px solid #2f22df;
     flex-direction: column;
     align-items: center;
-    background-color: #00113B;
+    background-color: var(--background);
     box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.2);
     border-radius: 20px;
     padding: 44px;
@@ -2185,6 +2188,13 @@ picture {
   }
 }
 @media screen and (max-width: 480px) {
+  .customer-data-item {
+    background-color: var(--item-color);
+    box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.2);
+    border-radius: 20px;
+    border: 1px solid #2f22df;
+  }
+
   .footer .container-footer-blue .footer-input input {
     padding: 28px;
     color: white;
